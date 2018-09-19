@@ -178,7 +178,7 @@ body {
 /* line 74, sass/styles.sass */
 .header {
   width: 100%;
-  background-image: url('/navigatie/images/Header.jpg');
+  background-image: url("../images/Header.jpg");
   background-size: cover;
   background-position: 50% 90%;
   height: 15rem;
