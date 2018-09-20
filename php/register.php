@@ -1,6 +1,5 @@
 <?php
 include('../includes/connection.php');
-$connection = new connection;
 
 if (isset($_POST['submit'])) {
 
