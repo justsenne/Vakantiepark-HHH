@@ -9,6 +9,8 @@ if (isset($_POST['submit'])) {
     $fileError = $file['error'];
     $fileFile = $file['type'];
 
+    // house_name house_description park_id house_photos general_information person_count level discount Product toevoegen
+
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
 
@@ -24,7 +26,7 @@ if (isset($_POST['submit'])) {
                     $fileDestination = '../data/img/' . $fileHash;
                     move_uploaded_file($fileTMPname, $fileDestination);
 
-                    $sql = "INSERT INTO articles(article_name, article_description, article_price, article_image) VALUES ( :articlename, :articledesc, :articleprice, :articleimage)";
+                    $sql = "INSERT INTO homes('house_name' 'house_description' 'park_id' 'house_photos' 'general_information' 'person_count' 'level' 'discount' 'Product') VALUES (':house_name' ':house_description' ':park_id' ':house_photos' ':general_information' ':person_count' ':level' ':discount' ':Product')";
 
                     $stmt = $conn->prepare($sql);
 
