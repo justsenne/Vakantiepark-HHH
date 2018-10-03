@@ -4,7 +4,7 @@ $connection = new connection();
 
 if (isset($_POST['submit'])) {
     echo '1 ';
-    if (isset($_POST['email']) && isset($_POST['password'])) {
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
         echo '2 ';
         //Insert into DB
         $query = $connection->connect()->prepare('INSERT INTO users (email, password, first_name, surname, phone_number, street_name, house_number) 
@@ -22,15 +22,11 @@ if (isset($_POST['submit'])) {
 
         if ($exec) {
             echo 'Inserted';
+            header('location: ../index.php');
         }
-        //header('location: ../index.php');
-        $_SESSION['error'] = '';
     } else {
-        echo 3;
-        $_SESSION['error'] = 'Please fill out the entire form.';
-        //header('location: register.php');
+        header('location: ../pages/register.php');
     }
 } else {
-    echo 4;
     echo 'Nothing was inserted';
 }
