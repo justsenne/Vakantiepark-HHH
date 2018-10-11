@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welkom - </title>
+    <title><?php if (isset($_SESSION['logged_in'])) {
+            echo 'Welkom - ' . $_SESSION['email'];
+        } ?></title>
     <?php
     session_start();
     include("includes/includes.php");
@@ -20,13 +22,16 @@
                 <a href="#">Contact</a>
             </li>
             <li>
+                <a href="pages/addhome.php">Huizen Toevoegen</a>
+            </li>
+            <li>
                 <div class="splitter"></div>
             </li>
             <li>
                 <?php if (isset($_SESSION['logged_in'])) { ?>
                     <a class="button" href="php/logout.php">Uitloggen <i class="material-icons">navigate_next</i></a>
                 <?php } else { ?>
-                    <a class="button" href="pages/login.php">Aanmelden <i class="material-icons">navigate_next</i></a>
+                    <a class="button" href="pages/login.php">Inloggen <i class="material-icons">navigate_next</i></a>
                 <?php } ?>
             </li>
         </ul>
