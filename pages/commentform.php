@@ -1,9 +1,8 @@
 <!-- jongens dit moeten jullie onder de huisjes pagina plekken -->
 
-
 <div class="my-3 p-3 bg-white rounded box-shadow container">
-    <form class="p-3" action="../php/addcomment.php?article=<?php echo $_GET['article']; ?>" method="POST">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Laat uw mening over dit product:</h6>
+    <form class="p-3" action="../php/addcomment.php" method="POST">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Laat uw mening over deze huis:</h6>
         <div class="row my-2">
             <div class="col-2">
                 <label>Cijfer:</label>
