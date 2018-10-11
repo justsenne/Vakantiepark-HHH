@@ -25,6 +25,9 @@
                 <a href="pages/addhome.php">Huizen Toevoegen</a>
             </li>
             <li>
+                <a href="pages/usersettings.php">Mijn Account</a>
+            </li>
+            <li>
                 <div class="splitter"></div>
             </li>
             <li>
