@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['user_id'] = $results['user_id'];
                 $_SESSION['email'] = $results['email'];
                 $_SESSION['logged_in'] = true;
+                $_SESSION['use_role'] = $results['role'];
             }
             header('location: ../index.php');
             exit;
