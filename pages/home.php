@@ -8,7 +8,6 @@ include("../includes/connection.php");
 $connect = new connection();
 
 // test variabel
-$_GET['house'] = 1;
 
 ?>
 </head>
@@ -25,23 +24,15 @@ if (isset($_GET['house'])) {
     $result = $sql->fetchAll();
 
     foreach ($result as $row) {
-        $foto_results = explode('~ ', $row['house_photos']);
 
         echo "<div class='product-page'><h1>"
             . strip_tags($row['house_name'], '')
             . " - $"
             . strip_tags($row["price"], '')
-            //. "</h1><img style='width: 100%; height: 100%; object-fit: cover;' src='../data/img/"
-            //. $row['house_photos']
-            //. "'> "
+            . "</h1><img style='width: 100%; height: 100%; object-fit: cover;' src='../data/img/"
+            . $row['house_photos']
+            . "'> "
             . $row['house_description'];
-
-            foreach ($foto_results as $foto_result) {
-            ?>
-            <img style='width: 100%; height: 100%; object-fit: cover;' src='../data/img/"<?php echo $foto_result; ?>'>
-            <?php
-            }
-            $houseid = $row['house_id'];
 
         echo "<p> level: " . $row["level"] . "</p> </div>";
     }
@@ -55,19 +46,54 @@ if (isset($_SESSION['logged'])) {
     // controlleerd of de user het product aan heeft gemaakt
     if ($useredit == $_SESSION['role']) {
         // print de urls uit
-        echo "<a href='productupdate.php?product="
+        echo "<a href='../php/homeupdate.php?product="
             . $houseid
             . "'> Verander </a>"
-            . "<a href='productdelete.php?product="
+            . "<a href='../php/homedelete.php?product="
             . $houseid
             . "'> Verwijder </a>";
     }
 }
-
-// include de footer
-include("footer.php");
-
 ?>
+
+<div class="my-3 p-3 bg-white rounded box-shadow container">
+    <form class="p-3" action="../php/addcomment.php" method="POST">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Laat uw mening over deze huis:</h6>
+        <div class="row my-2">
+            <div class="col-2">
+                <label>Cijfer:</label>
+                <select class="form-control form-control-md" name="rating" style="text-align: center">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option selected="selected">10</option>
+                </select>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-12">
+                <label>Toelichting:</label><br/>
+                <input type="text" class="form-control form-control-md" name="comment" id="comment"></input>
+
+            </div>
+        </div>
+        <div class="row my-2 ">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Recentie versturen" name="submit">
+            </div>
+        </div>
+        <!--        <label for="number"> rating:</label>-->
+        <!--        <input type="number" name="rating" max="10" min="0">-->
+        <!--        <textarea name="comment" maxlength="1500" id="comment" cols="30" rows="10"></textarea>-->
+        <!--        <input type="submit" name="submit" value="place comment">-->
+    </form>
+</div>
 
 </body>
 </html>
