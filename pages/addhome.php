@@ -1,43 +1,58 @@
 <html>
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <?php
+    include('../php/addhome.php');
+    ?>
 </head>
 <body>
 
-    <form>
+    <form action="../php/addhome.php" method="post" enctype="multipart/form-data">
         naam:
-        <input type="text" name="naam"><br/>
+        <input type="text" name="house_name"><br/>
 
         omschrijving:
-        <input type="text" name="omschrijving"><br/>
-
-        locatie:
-        <input type="text" name="locatie"><br/>
+        <input type="text" name="house_description"><br/>
 
         Afwerkingsniveau:
-        <input type="radio" name="afwerkingsniveau" value="zilver"> zilver
-        <input type="radio" name="afwerkingsniveau" value="goud"> goud<br>
+        <input type="radio" name="level" value="zilver"> zilver
+        <input type="radio" name="level" value="goud"> goud<br>
+
+        Aantal personen:
+        <input type="number" name="person_count"><br>
+
+        Prijs:
+        <input type="text" name="price"><br>
+
+        Kortingsprijs:
+        <input type="text" name="discount"><br>
+
+        park:
+        <select name="park_id" id="park">
+            <option value="0">Kies een park</option>
+            <?php foreach($parks as $park) { echo '<option value="' . $park['park_id'] .'">' . $park['park_name'] . '</option>'; } ?>
+        </select><br>
 
         faciliteiten:<br/>
         <div id="faciliteiten"></div>
-        <input type="button" id="addFac" value="add faciliteit"><br /><br/>
-<!--        <input type="button" class="removeFac" value="facliliteit verwijderen">-->
-        Foto´s:
-        <input type="file" name="fotos"><br/><br />
 
-        <input type="submit" name="button" value="Huis toevoegen">
+        <input type="button" id="addFac" value="add faciliteit"><br /><br/>
+        Foto´s:
+        <input type="file" name="housepics"><br/><br/>
+        <input type="submit" name="submit" value="Huis toevoegen">
 
     </form>
+
     <script>
         $( document ).ready(function() {
-            var newDiv = $('<input id="faciliteit" type="text" name="faciliteit">');
+            var newDiv = $('<input id="faciliteit" type="text" name="general_information[]">');
             //newDiv.style.background = "#000";
             $('#faciliteiten').append(newDiv);
         });
 
         $(function() {
             $('#addFac').click(function(){
-                var newDiv = $('<!-- <input type="button" class="removeFac" value="facliliteit verwijderen"> --><br/><input id="faciliteit" type="text" name="faciliteit">');
+                var newDiv = $('<br/><input id="faciliteit" type="text" name="general_information[]">');
                 $('#faciliteiten').append(newDiv);
                 $(this).reload();
             });

@@ -3,9 +3,7 @@ include('../includes/connection.php');
 $connection = new connection();
 
 if (isset($_POST['submit'])) {
-    echo '1 ';
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
-        echo '2 ';
         //Insert into DB
         $query = $connection->connect()->prepare('INSERT INTO users (email, password, first_name, surname, phone_number, street_name, house_number) 
                                                       VALUES (:email, :password, :first_name, :surname, :phone_number, :street_name, :house_number)');
