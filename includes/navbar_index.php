@@ -1,6 +1,6 @@
 <div class="nav">
     <div class="container">
-        <img class="logo" src="../Untitled.png" alt="">
+        <img class="logo" src="Untitled.png" alt="">
         <ul>
             <li>
                 <a href="#">Vakantieparken</a>
@@ -9,11 +9,11 @@
                 <a href="#">Contact</a>
             </li>
             <li>
-                <a href="addhome.php">Huizen Toevoegen</a>
+                <a href="pages/addhome.php">Huizen Toevoegen</a>
             </li>
             <?php if (isset($_SESSION['logged_in'])) { ?>
                 <li>
-                    <a href="usersettings.php">Mijn Account</a>
+                    <a href="pages/usersettings.php">Mijn Account</a>
                 </li>
             <?php } ?>
             <li>
@@ -23,14 +23,14 @@
 
             <?php } else { ?>
                 <li>
-                    <a class="button" href="register.php">Registeer <i class="material-icons">navigate_next</i></a>
+                    <a class="button" href="pages/register.php">Registeer <i class="material-icons">navigate_next</i></a>
                 </li>
             <?php } ?>
             <li>
                 <?php if (isset($_SESSION['logged_in'])) { ?>
-                    <a class="button" href="logout.php">Uitloggen <i class="material-icons">navigate_next</i></a>
+                    <a class="button" href="php/logout.php">Uitloggen <i class="material-icons">navigate_next</i></a>
                 <?php } else { ?>
-                    <a class="button" href="login.php">Login <i class="material-icons">navigate_next</i></a>
+                    <a class="button" href="pages/login.php">Login <i class="material-icons">navigate_next</i></a>
                 <?php } ?>
             </li>
         </ul>

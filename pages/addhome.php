@@ -66,8 +66,6 @@
                 $(this).remove();
             });
         });
-
-
     </script>
 </body>
 </html>
