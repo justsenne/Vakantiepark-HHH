@@ -19,16 +19,19 @@
                 <li class="nav-item">
                     <a class="nav-link waves-effect waves-light" href="pages/addhome.php">Huizen toevoegen</a>
                 </li>
-                <li class="nav-item avatar dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Mijn account
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-left dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
-                        <a class="dropdown-item waves-effect waves-light" href="#">profiel</a>
-                        <a class="dropdown-item waves-effect waves-light" href="#">Instellingen</a>
-                        <a class="dropdown-item waves-effect waves-light" href="#">Logout</a>
-                    </div>
-                </li>
+                <?php if (isset($_SESSION['logged_in'])) { ?>
+                    <li class="nav-item avatar dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mijn account
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-left dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
+                            <a class="dropdown-item waves-effect waves-light" href="#">profiel</a>
+                            <a class="dropdown-item waves-effect waves-light" href="#">Instellingen</a>
+                            <a class="dropdown-item waves-effect waves-light" href="#">Logout</a>
+                        </div>
+                    </li>
+                <?php } else { ?>
+                <?php } ?>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['logged_in'])) { ?>

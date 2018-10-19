@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Nav begin-->
-<?php include 'includes/nav.php';
+<?php include 'includes/navbar_index.php';
 ?>
 <div class="container mt-5">
     <div class="row">
