@@ -52,7 +52,7 @@ include('../includes/navbar.php');
             </p>
             <input type="text" name="email" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="E-mail">
             <input type="password" name="password" id="defaultSubscriptionFormPassword" class="form-control mb-4" placeholder="Wachtwoord">
-            <button class="btn btn-primary btn-block" type="submit">Login</button>
+            <button class="btn btn-primary btn-block" name="submit" type="submit">Login</button>
             </form>
         </div>
     </div>

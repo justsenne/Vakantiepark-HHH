@@ -41,5 +41,8 @@ if (isset($_POST['submit'])) {
         echo 'Voer een naam en wachtwoord in';
         header('location: ../pages/login.php');
     }
+} else {
+    echo 'balzak';
     return false;
+
 }
