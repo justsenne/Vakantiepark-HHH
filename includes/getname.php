@@ -5,7 +5,7 @@ Class getname
 {
     public function dbConnect()
     {
-        return new PDO("mysql:host=localhost; dbname=wodknet", "root", "");
+        return new PDO("mysql:host=localhost; dbname=hhh", "root", "");
     }
 
     public function getUsername($user_id)

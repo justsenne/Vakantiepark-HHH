@@ -109,7 +109,7 @@ if (isset($_SESSION['logged_in'])) {
         // ik heb de wrapper ff de class products gegeven voor overzichtelijkheid
         echo "<div class='media text-muted pt-3'> <p class='media-body pb-3 mb-0 small lh-125 border-bottom border-gray'>
             <strong class='d-block text-gray-dark'>
-    " . $username->getUsername($row["user_id"]) . " geeft dit product een " . $row["rating"] . "
+    " . $username->getUsername($row["user_id"]) . " geeft dit product een " . $row["category_rating"] . "
 </strong>
     " . $row["comment"] . "  </p>";
         if ($row["user_id"] == $_SESSION["user_id"]) {
