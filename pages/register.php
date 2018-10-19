@@ -74,7 +74,7 @@ include('../includes/navbar.php');
                     </div>
                 </div>
 
-                <button class="btn btn-primary btn-block" type="submit">Register</button>
+                <button class="btn btn-primary btn-block" name="submit" type="submit">Register</button>
             </form>
         </div>
     </div>
