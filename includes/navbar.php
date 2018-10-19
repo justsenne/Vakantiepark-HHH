@@ -35,13 +35,11 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['logged_in'])) { ?>
-                    <a class="button" href="php/logout.php">Uitloggen <i class="material-icons">navigate_next</i></a>
                     <li class="nav-item">
                         <a class="btn btn-sm align-middle text-primary bg-white" style="border-radius: 90px; font-size: 14px" href="../php/logout.php">Uitloggen <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </a>
                     </li>
                 <?php } else { ?>
-                    <a class="button" href="pages/login.php">Login <i class="material-icons">navigate_next</i></a>
                     <li class="nav-item">
                         <a class="btn btn-sm align-middle text-primary bg-white" style="border-radius: 90px; font-size: 14px" href="../pages/register.php">Registreren <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </a>
