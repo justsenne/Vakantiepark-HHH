@@ -22,7 +22,7 @@ if (isset($_POST["submit"])) {
     $stmt->bindParam(':comment', $comment, PDO::PARAM_STR);
     if ($_POST['rating'] <= 10 && $_POST['rating'] >= 0) {
         $KLAP = $stmt->execute();
-        //header("Location: productpage.php?article=". $_GET['article']);
+        header("Location: ../pages/home.php?house=". $_GET['house']);
         exit;
     } else {
         echo "HACKERMEN <img src='http://i0.kym-cdn.com/entries/icons/original/000/021/807/4d7.png'>";
