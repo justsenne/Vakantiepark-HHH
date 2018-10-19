@@ -40,8 +40,7 @@ if (isset($_POST['submit'])) {
         echo 'is niet gezet';
     }
     if (isset($_POST['house_name']) && isset($_POST['house_description'])) {
-        $query = $connect->connect()->prepare('INSERT INTO homes (house_name, house_description, house_photos, park_id , person_count, general_information, house_level, price, discount)
-                                                        VALUES (:house_name, :house_description, :house_photos, :park_id, :person_count, :general_information, :house_level, :price, :discount)');
+        $query = $connect->connect()->prepare('INSERT INTO homes (house_name, house_description, house_photos, park_id , person_count, general_information, house_level, price, discount) VALUES (:house_name, :house_description, :house_photos, :park_id, :person_count, :general_information, :house_level, :price, :discount)');
 
         $execute = $query->execute(array(
             ':house_name' => $_POST['house_name'],
