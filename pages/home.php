@@ -29,31 +29,9 @@ include('../includes/navbar.php');
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="card mt-5">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card-body">
-                            <h4 class="card-title">Titel - Prijs</h4>
-                            <hr>
-                            <p class="card-text">Omschrijving.</p>
-                            <a href="" style="border-radius: 90px;" class="btn btn-primary waves-effect waves-light">Button</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img class="card-img" src="https://images.unsplash.com/photo-1533667586627-9f5ddbd42539?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=bb707c0b87345277ebc415156111fb69&amp;auto=format&amp;fit=crop&amp;w=1920&amp;h=1080&amp;q=60" alt="Card image cap">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
     <?php
     // get controle
-    if (isset($_GET['house'])) {
+    if (isset($_GET['house']) && !empty($_GET['house'])){
 // print huis uit
         $sql = $connect->connect()->prepare("SELECT * FROM homes WHERE house_id=?");
         $sql->BindParam(1, $_GET['house']);
@@ -61,26 +39,54 @@ include('../includes/navbar.php');
         $result = $sql->fetchAll();
 
         foreach ($result as $row) {
-            $facilities = explode(", ", $row['general_information']);
-            /* if ($row['house_id'] = $_GET['house']) {
-                 header("Location: ../index.php");  }*/
-            echo "<div class='product-page'><h1>"
-                . strip_tags($row['house_name'], '')
-                . " - $"
-                . strip_tags($row["price"], '')
-                . "</h1><img style='width: 100%; height: 100%; object-fit: cover;' src='../data/img/"
-                . $row['house_photos']
-                . "'> "
-                . $row['house_description'] . "<br/> <p>faciliteiten:</p>"
-                . implode($facilities,"<br/>");
-
-            echo "<p> level: " . $row["level"] . "</p> </div>";
-            $houseid = $_GET['house'];
-
-
+                $facilities = explode(", ", $row['general_information']);
+                echo "<div class=\"col-md-6\">
+                <div class=\"card mt-5\">
+                    <img class=\"card-img\" src=\"../data/img/" . $row['house_photos'] . "\" alt=\"Foto van het huis/de kamer\">
+                    <div class=\"card-body\">
+                        <h4 class=\"card-title\"> " . strip_tags($row['house_name'], '')
+                    . "</h4>
+                        <hr>
+                        <p class=\"card-text mb-0 font-weight-bold\">Omschrijving:</p>
+                        <p class=\"card-text mb-3\"> " . $row['house_description'] . " </p>
+                        <div class=\"form-row mb-3\">
+                            <div class=\"col custom-control custom-radio\">
+                                <p class=\"card-text font-weight-bold\">Afwerkingsniveau:</p>
+                            </div>
+                            <div class=\"col custom-control custom-radio\">
+                                <p class=\"card-text\"> " . $row["house_level"] . " </p>
+                            </div>
+                            <div class=\"col custom-control\">
+                            </div>
+                        </div>
+                        <p class=\"card-text font-weight-bold mb-0\">Faciliteiten:</p>
+                        <p class=\"card-text mb-0\">" . implode($facilities, "<br/>") . "</p>
+                    </div>
+                </div>
+                </div>
+                <div class='col-md-6'>
+                <div class=\"card mt-5\">
+                    <div class=\"card-body\">
+                        <h4 class=\"card-title\">Boeken?</h4>
+                        <hr>
+                        <div class=\"form-row mb-3\">
+                            <div class=\"col custom-control custom-radio\">
+                                <p class=\"card-text font-weight-bold\">Prijs per nacht:</p>
+                            </div>
+                            <div class=\"col custom-control custom-radio\">
+                                <p class=\"card-text\"><s>€" . strip_tags($row["price"], '') . "</s></p>
+                            </div>
+                            <div class=\"col custom-control\">
+                                <p class=\"card-text\">€" . strip_tags($row["discount"], '') . "</p>
+                            </div>
+                            <div class=\"col custom-control\">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>";
         }
-
-
     } else {
         header("Location: ../index.php");
     }
