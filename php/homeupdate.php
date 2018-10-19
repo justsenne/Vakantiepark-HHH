@@ -17,17 +17,17 @@ zegmaar we moeten de home toevoegen nog doen hiervoor
 
 
 <?php
-/*
+
 //start de sessie (waarin ik variabelen mee opsla door pagina's heen)
 session_start();
 // include de database connectie variabel
-include_once('connection.php');
+include_once('../includes/connection.php');
 
 // als de form is ge submit
 if (isset($_POST['submit'])) {
 
     // haalt alles op van de vinyl desc met het zelfde vinyl id als meegegeven in de get
-    $sql = $conn->prepare("SELECT * FROM vinyl_desc WHERE vinyl_id=?");
+    $sql = $connect->prepare("SELECT * FROM homes WHERE house_id=?");
     $sql->BindParam(1, $_GET['product']);
     $sql->execute();
     $result = $sql->fetchAll();
