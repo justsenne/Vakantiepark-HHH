@@ -1,6 +1,6 @@
 <nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color lighten-1 sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="#">
             <img src="logo.png" height="30" alt="mdb logo">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,11 +35,13 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <?php if (isset($_SESSION['logged_in'])) { ?>
+                    <a class="button" href="php/logout.php">Uitloggen <i class="material-icons">navigate_next</i></a>
                     <li class="nav-item">
                         <a class="btn btn-sm align-middle text-primary bg-white" style="border-radius: 90px; font-size: 14px" href="php/logout.php">Uitloggen <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </a>
                     </li>
                 <?php } else { ?>
+                    <a class="button" href="pages/login.php">Login <i class="material-icons">navigate_next</i></a>
                     <li class="nav-item">
                         <a class="btn btn-sm align-middle text-primary bg-white" style="border-radius: 90px; font-size: 14px" href="pages/register.php">Registreren <i class="fa fa-chevron-right" aria-hidden="true"></i>
                         </a>
@@ -51,6 +53,5 @@
                 <?php } ?>
 
             </ul>
-        </div>
-    </div>
+        </div></div>
 </nav>
