@@ -11,166 +11,72 @@
 </head>
 <body>
 <!-- Nav begin-->
-<?php include 'includes/navbar_index.php';
+<?php include 'includes/nav.php';
 ?>
-<!-- Nav eind-->
-
-<!-- Header begin-->
-<div class="header">
-    <h1>
-        Al onze vakantieparken.
-    </h1>
-</div>
-<!-- Header eind-->
-
-<!-- Alle Huizen begin-->
-<div class="AlleHuizen">
-    <div class="container">
-        <div class="land">
-            <h2>Vakantieparken</h2>
-            <p>Specifiek op zoek naar een van onze vakantieparken? Voor u heeft Happy Home Holidays meer dan 134
-                vakantieparken op volgorde van locatie gezet. Zo kan u dus heel erg eenvoudig uw gewenste park vinden,
-                vergelijken en boeken.</p>
-        </div>
-        <div class="land">
-            <h3>Duitsland</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-            </ul>
-        </div>
-        <div class="land">
-            <h3>Nederland</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 6</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 7</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 8</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 9</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 10</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 11</a></li>
-            </ul>
-        </div>
-        <div class="land">
-            <h3>Italië</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 6</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 7</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 8</a></li>
-            </ul>
-        </div>
-        <div class="land">
-            <h3>Frankrijk</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 6</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 7</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 8</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 9</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 10</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 11</a></li>
-            </ul>
-        </div>
-        <div class="land">
-            <h3>Polen</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-            </ul>
-        </div>
-        <div class="land">
-            <h3>Bulgarije</h3>
-            <ul>
-                <li><a href="#">Vakantiepark Randomnaam 1</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 2</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 3</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 4</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 5</a></li>
-                <li><a href="#">Vakantiepark Randomnaam 6</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 7</a></li>
-                <li><a href="#">Bungalowpark Randomnaam 8</a></li>
-            </ul>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-image" style="background-image: url(Header.jpg); background-size: cover;
+  background-position: 50% 90%;">
+                <div class="text-white text-center py-5 px-4 my-5">
+                    <div>
+                        <h1 class="card-title pt-3 mb-5 font-bold"><strong>Waar ga jij heen op vakatie?</strong></h1>
+                        <a class="btn btn-outline-white btn-rounded" style="border-radius: 90px;"><i class="fa fa-home left"></i> Bekijk onze vakantiehuizen</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!-- Alle Huizen eind-->
 
-<!-- Footer begin-->
-<div class="footer">
-    <div class="content">
-        <div class="container">
-            <ul>
-                <li>
-                    <img class="logo" src="Untitled.png" alt="">
-                </li>
-                <li>
-                    <h5>
-                        Qwerty logo
-                    </h5>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h5>
-                        Klantenservice
-                    </h5>
-                </li>
-                <li>
-                    <a href="#VeelGesteldeVragen">
-                        Veel gestelde vragen
-                    </a>
-                </li>
-                <li>
-                    <a href="#Contact">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <h5>
-                        Privacy & Voorwaarden
-                    </h5>
-                </li>
-                <li>
-                    <a href="#AlgemeneVoorwaarden">
-                        ik hou van bukkake
-                    </a>
-                </li>
-                <li>
-                    <a href="#Privacy">
-                        Privacy
-                    </a>
-                </li>
-            </ul>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12 mt-5">
+            <h4>Dit zijn onze laatste vakantiehuizen:</h4>
         </div>
-    </div>
-    <div class="copyright">
-        <div class="container">
-            Copyright © 2018 Happy Home Holidays, Alle rechten voorbehouden.
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card mt-5">
+                <!--                  <div class="card-header primary-color white-text">-->
+                <!--                      Naam van vakantiehuis.-->
+                <!--                  </div>-->
+                <img class="card-img" src="https://images.unsplash.com/photo-1533667586627-9f5ddbd42539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb707c0b87345277ebc415156111fb69&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title"><a>Card title</a></h4>
+                    <hr />
+                    <p class="card-text">Huis beschrijving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia.</p>
+                    <a href="" style="border-radius: 90px;" class="btn btn-primary">Button</a>
+                </div>
+            </div>
         </div>
+
+        <div class="col-md-6 mb-5 col-lg-4">
+            <div class="card mt-5">
+                <!--                  <div class="card-header primary-color white-text">-->
+                <!--                      Naam van vakantiehuis.-->
+                <!--                  </div>-->
+                <img class="card-img" src="https://images.unsplash.com/photo-1533667586627-9f5ddbd42539?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bb707c0b87345277ebc415156111fb69&auto=format&fit=crop&w=1920&h=1080&q=60" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title"><a>Card title</a></h4>
+                    <hr />
+                    <p class="card-text">Huis beschrijving. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia.</p>
+                    <a href="" style="border-radius: 90px;" class="btn btn-primary">Button</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
-</div>
-<!-- Footer eind-->
+<!-- Footer -->
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
