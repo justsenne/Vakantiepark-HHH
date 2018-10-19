@@ -44,8 +44,7 @@ include('../includes/navbar.php');
                 <div class=\"card mt-5\">
                     <img class=\"card-img\" src=\"../data/img/" . $row['house_photos'] . "\" alt=\"Foto van het huis/de kamer\">
                     <div class=\"card-body\">
-                        <h4 class=\"card-title\"> " . strip_tags($row['house_name'], '')
-                    . "</h4>
+                        <h4 class=\"card-title\"> " . strip_tags($row['house_name'], '') . "</h4>
                         <hr>
                         <p class=\"card-text mb-0 font-weight-bold\">Omschrijving:</p>
                         <p class=\"card-text mb-3\"> " . $row['house_description'] . " </p>
