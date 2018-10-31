@@ -104,9 +104,7 @@ include('../includes/navbar.php');
             $(this).reload();
         });
     });
-
-
-    // ! dit werkt niet als .removeFac in #faciliteiten zit maar wel als hij achter de add fac button staat huh?? moet ik nog fixen.
+    
     $(function() {
         $('#faciliteiten').on('click', '#removeFac', function() {
             $(this).parent().parent().remove();
