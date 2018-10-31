@@ -29,7 +29,7 @@ include('../includes/navbar.php');
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 mt-5">
-            <form class="text-center border border-light p-5"">
+            <form class="text-center border border-light p-5" action="../php/addhome.php" method="post">
             <p class="h4 mb-4">Vakantie huis toevoegen</p>
             <input type="text" class="form-control mb-4" placeholder="Huisnaam" name="house_name" >
             <textarea class="form-control mb-4" placeholder="Huisomschrijving" name="house_description" rows="5"></textarea>
@@ -65,7 +65,7 @@ include('../includes/navbar.php');
                 <input type="file" class="" name="housepics">
             </div>
 
-            <button class="btn btn-primary btn-block" type="submit">Voeg huis toe</button>
+            <button class="btn btn-primary btn-block" type="submit" name="submit">Voeg huis toe</button>
             </form>
         </div>
     </div>
@@ -104,7 +104,7 @@ include('../includes/navbar.php');
             $(this).reload();
         });
     });
-    
+
     $(function() {
         $('#faciliteiten').on('click', '#removeFac', function() {
             $(this).parent().parent().remove();
