@@ -25,9 +25,9 @@
                             Mijn account
                         </a>
                         <div class="dropdown-menu dropdown-menu-left dropdown-secondary" aria-labelledby="navbarDropdownMenuLink-5">
-                            <a class="dropdown-item waves-effect waves-light" href="#">profiel</a>
-                            <a class="dropdown-item waves-effect waves-light" href="#">Instellingen</a>
-                            <a class="dropdown-item waves-effect waves-light" href="#">Logout</a>
+                            <a class="dropdown-item waves-effect waves-light" href="pages/userinfo.php">Mijn gegevens</a>
+                            <a class="dropdown-item waves-effect waves-light" href="#">Mijn boekingen</a>
+                            <a class="dropdown-item waves-effect waves-light" href="php/logout.php">Logout</a>
                         </div>
                     </li>
                 <?php } else { ?>
